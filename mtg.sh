@@ -63,7 +63,7 @@ cat > config.json <<EOF
 EOF
 
 # 启动 mtg 并在后台运行，完全隐藏输出
-nohup ./mtg simple-run -n 1.1.1.1 -t 30s -a 1MB 0.0.0.0:${port} ${secret} -c 8192 --prefer-ip="prefer-ipv6" > /dev/null 2>/dev/null &
+nohup ./mtg simple-run -n 1.1.1.1 -t 30s -a 1MB 0.0.0.0:${port} ${secret} -c 8192 --prefer-ip="prefer-ipv6" > /dev/null 2>&1 &
 
 # 检查 mtg 是否启动成功
 sleep 3
@@ -117,7 +117,7 @@ if ! pgrep -x "mtg" > /dev/null; then
     pkill -f mtg   # 终止任何 mtg 相关进程（防止残留）
     
     # 启动 mtg
-    nohup ./mtg simple-run -n 1.1.1.1 -t 30s -a 1MB 0.0.0.0:${PORT} ${SECRET} -c 8192 --prefer-ip="prefer-ipv6" > /dev/null 2>/dev/null &
+    nohup ./mtg simple-run -n 1.1.1.1 -t 30s -a 1MB 0.0.0.0:${PORT} ${SECRET} -c 8192 --prefer-ip="prefer-ipv6" > /dev/null 2>&1 &
     
     # 生成完整的 mtproto 链接
     mtproto="tg://proxy?server=${HOST}&port=${PORT}&secret=${SECRET}"
