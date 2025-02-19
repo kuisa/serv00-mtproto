@@ -13,7 +13,7 @@
 执行如下代码进行安装
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/moneytree520/serv00-mtproto/main/mtg.sh -o mtg.sh && chmod +x mtg.sh
+curl -sSL https://raw.githubusercontent.com/kuisa/serv00-mtproto/main/mtg.sh -o mtg.sh && chmod +x mtg.sh
 
 bash mtg.sh
 ```
