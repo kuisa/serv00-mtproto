@@ -13,9 +13,9 @@
 执行如下代码进行安装
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/kuisa/serv00-mtproto/main/mtg.sh -o mtg.sh && chmod +x mtg.sh
+curl -sSL https://raw.githubusercontent.com/kuisa/serv00-mtproto/main/mtp.sh -o mtp.sh && chmod +x mtp.sh
 
-bash mtg.sh
+bash mtp.sh
 ```
 
 ## 卸载安装
@@ -24,7 +24,7 @@ bash mtg.sh
 
 ```bash
 rm -rf /home/${USER}/mtg
-rm -rf /home/${USER}/mtg.sh
+rm -rf /home/${USER}/mtp.sh
 ```
 
 # 可自行选择保活
